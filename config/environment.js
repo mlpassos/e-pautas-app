@@ -4,8 +4,19 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'embeter-materialize',
     environment: environment,
-    rootURL: '/',
-    locationType: 'auto',
+    baseURL: '/',
+    locationType: 'hash',
+    EmberENV: {
+      FEATURES: {
+        // Here you can enable experimental features on an ember canary build
+        // e.g. 'with-controller': true
+      }
+    },
+
+    APP: {
+      // Here you can pass flags/options to your application instance
+      // when it is created
+    },
     firebase: {
       apiKey: "AIzaSyDLHtT7XeTZqbJYbAZprumVFHa9ZJuX2Tc",
       authDomain: "e-pautas.firebaseapp.com",
@@ -22,63 +33,44 @@ module.exports = function(environment) {
         }
       }
     },
-    'ember-cli-lightbox': {
-      lightboxOptions: {
-        alwaysShowNavOnTouchDevices:  false,
-        albumLabel:           "Imagem %1 de %2",
-        disableScrolling:       false,
-        fadeDuration:         500,
-        fitImagesInViewport:      true,
-        maxWidth:           1000,
-        maxHeight:            1000,
-        positionFromTop:        50,
-        resizeDuration:         700,
-        showImageNumberLabel:     true
-      }
-    },
-    EmberENV: {
 
-      FEATURES: {
-        // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
+    cordova: {
+      rebuildOnChange: false,
+      emulate: false,
+      emulateTarget: {
+        ios: "iPad-2",
+        android: "android-23"
       },
-      EXTEND_PROTOTYPES: {
-        Date: false,
-        Array: true
+
+      // Which platform to build and/or emulate
+      //
+      // default: 'ios'
+      platform: 'android',
+
+      // Which URL the ember server is running on. This is used when using
+      // live-reload that comes with the starter kit.
+      //
+      // default: 'the-device-ip:4200'
+      emberUrl: 'http://10.108.2.39:4200',
+
+      // Whether or not to use liveReload on the device simulator. Requires a few
+      // plugins to be installed that come with the starter-kit. It will cause your
+      // app to not boot up in the browser
+      //
+      // default: false and iOS
+      liveReload: {
+        enabled: false,
+        platform: 'android'
       }
-    },
-    contentSecurityPolicy: {
-      'script-src': "'self' 'unsafe-eval' apis.google.com",
-      'frame-src': "'self' https://*.firebaseapp.com",
-      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
-    },
-    APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
-    }    
-  };
-
-  // ENV.contentSecurityPolicy = {
-  //   'default-src': "'none'",
-  //   'script-src': "'self' 'unsafe-eval' *.googleapis.com maps.gstatic.com",
-  //   'font-src': "'self' fonts.gstatic.com",
-  //   'connect-src': "'self' maps.gstatic.com",
-  //   'img-src': "'self' *.googleapis.com maps.gstatic.com csi.gstatic.com",
-  //   'style-src': "'self' 'unsafe-inline' fonts.googleapis.com maps.gstatic.com"
-  // };
-
-  ENV.googleMap = {
-    apiKey: 'AIzaSyAcqXF6nzd3bfoM7LvN9Y4NloaHI-leLq0',
-    // apiKey: 'AIzaSyDLHtT7XeTZqbJYbAZprumVFHa9ZJuX2Tc',
-    libraries: ['places','drawing', 'visualization']
+    }
   };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {

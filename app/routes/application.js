@@ -6,6 +6,7 @@ const {get} = Ember;
 export default TransitionToListenerRoute.extend({
     beforeModel(){
     	let _this = this;
+    	console.log('hellooooooo');
 		return this.get('session').fetch().catch(function(){
 			_this.router.transitionTo('home');
 		});

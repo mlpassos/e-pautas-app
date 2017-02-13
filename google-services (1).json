@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "568980210268",
+    "firebase_url": "https://e-pautas.firebaseio.com",
+    "project_id": "e-pautas",
+    "storage_bucket": "e-pautas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568980210268:android:ba08b0c40e4de71a",
+        "android_client_info": {
+          "package_name": "br.gov.pa.secom.epautasapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568980210268-f5md1dgsldfb59vjk9g7ion6amubdn9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC21v0LbP1kl9c_50XQKOhpYJtcYLzyHdo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568980210268-f5md1dgsldfb59vjk9g7ion6amubdn9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
